@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h1 id="my-contacts-list">
+        <i class="fas fa-address-book"></i>
+        My Contacts List
+    </h1>
+    <ul>
+        <% for (let i=0;i<contacts.length;i++) {%>
+            <li class="list-item">
+                <div class="list-item-div">
+                    <span><%= contacts[i].name%></span>
+                    <span><%= contacts[i].phone%></span>
+                </div>
+                <a href="/delete-contact/?index=<%=i%>"><i class="fas fa-window-close"></i></a>  <!-- using query params-->
+            </li>
+        <%}%>
+    </ul>
+    <form action="/contactList" method="POST" id="form">
+        <input type="text" class="name-phone-class" name="name" placeholder="Enter name" required>
+        <input type="number" class="name-phone-class" name="phone" placeholder="Enter Phone no." required>
+        <button type="submit" id="submit">Add to Contact</button>
+    </form>
+</body>
+</html>

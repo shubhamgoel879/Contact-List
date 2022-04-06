@@ -1,0 +1,74 @@
+body{
+    margin:0;
+    font-family: sans-serif;
+    text-align: center;
+}
+#my-contacts-list{
+    text-align: center;
+    color: grey;
+}
+#my-contacts-list:hover{
+    color: blue;
+    transition: all .1s ease-in-out;
+}
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    color:white;
+    margin:auto;
+    width: 40rem;
+    height: 3rem;
+    margin-top: 0.2rem;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.5rem;
+}
+.list-item-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30rem;
+}
+.fa-window-close{
+    color:white;
+}
+.fa-window-close:hover{
+    color: #eee;
+    transition: all .1s ease-in-out;
+    background-color: red;
+}
+.list-item:hover{
+    background-color: grey;
+    color: white;
+    transition: all .1s ease-in-out;
+}
+.name-phone-class{
+    border-style: none none solid none;
+    outline: none;
+    height:2rem;
+    width: 15rem ;
+}
+.name-phone-class:focus{
+    background-color: #eee;
+}
+#form{
+    display:flex;
+    justify-content: space-evenly;
+    margin:auto;
+}
+#submit{
+    height:2rem;
+    width: 11rem;
+    border: 3px solid grey;
+    color:grey;
+    background-color: white;
+}
+#submit:hover{
+    border: 3px solid grey;
+    color:white;
+    background-color: grey;
+    transition: all .1s ease-in-out;
+}
