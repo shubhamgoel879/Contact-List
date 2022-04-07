@@ -14,19 +14,19 @@
         My Contacts List
     </h1>
     <ul>
-        <% for (let i=0;i<contacts.length;i++) {%>
+        <% for(let i=0;i<contact_list.length;i++) {%>
             <li class="list-item">
                 <div class="list-item-div">
-                    <span><%= contacts[i].name%></span>
-                    <span><%= contacts[i].phone%></span>
+                    <span><%= contact_list[i].name%></span>
+                    <span><%= contact_list[i].phone%></span>
                 </div>
-                <a href="/delete-contact/?index=<%=i%>"><i class="fas fa-window-close"></i></a>  <!-- using query params-->
+                <a href="/delete-contact/?id=<%=contact_list[i]._id%>"><i class="fas fa-window-close"></i></a>  <!-- using query params-->
             </li>
         <%}%>
     </ul>
     <form action="/contactList" method="POST" id="form">
         <input type="text" class="name-phone-class" name="name" placeholder="Enter name" required>
-        <input type="number" class="name-phone-class" name="phone" placeholder="Enter Phone no." required>
+        <input type="text" class="name-phone-class" name="phone" placeholder="Enter Phone no." required>
         <button type="submit" id="submit">Add to Contact</button>
     </form>
 </body>
